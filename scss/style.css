@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -24,8 +26,7 @@ body {
   width: 320px;
   height: 499px;
   padding: 16px;
-  align-self: center;
-  margin: 0;
+  align-items: center;
   border-radius: 20px;
 }
 
@@ -33,16 +34,22 @@ body {
   font-size: 11px;
   text-align: center;
 }
-
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
-.text-content {
-  margin: 16px 0;
+.image-content img {
+  width: 288px;
+  height: 288px;
+  border-radius: 10px;
 }
 
-.textPreset1 {
+.text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
   text-align: center;
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
@@ -52,15 +59,18 @@ body {
   line-height: 120%;
   letter-spacing: 0;
   color: #1f314f;
+  padding: 16px 0;
 }
 
-.textPreset2 {
+.subtext {
   text-align: center;
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   line-height: 140%;
   font-weight: 400;
   color: #68778d;
-  letter-spacing: 0.2;
+  letter-spacing: 0.2px;
   font-size: 15px;
+  padding-bottom: 40px;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */

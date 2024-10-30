@@ -2,8 +2,11 @@ $light-color: #d5e1ef;
 $font-stack: "Outfit", sans-serif;
 $headingColor: #1f314f;
 $textColor: #68778d;
+$linkColor: hsl(228, 45%, 44%);
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -29,28 +32,30 @@ body {
   width: 320px;
   height: 499px;
   padding: 16px;
-  align-self: center;
-  margin: 0;
+  align-items: center;
   border-radius: 20px;
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  a {
+    color: $linkColor;
+  }
 }
 
-.attribution a {
-  color: hsl(228, 45%, 44%);
+.image-content img {
+  width: 288px;
+  height: 288px;
+  border-radius: 10px;
 }
 
 .text-content {
-  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
 }
 
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
-
-.textPreset1 {
+.heading {
   text-align: center;
   font-family: $font-stack;
   font-optical-sizing: auto;
@@ -60,15 +65,18 @@ body {
   line-height: 120%;
   letter-spacing: 0;
   color: $headingColor;
+  padding: 16px 0;
 }
 
-.textPreset2 {
+.subtext {
   text-align: center;
   font-family: $font-stack;
   font-optical-sizing: auto;
   line-height: 140%;
   font-weight: 400;
   color: $textColor;
-  letter-spacing: 0.2;
+  letter-spacing: 0.2px;
   font-size: 15px;
+  padding-bottom: 40px;
+  justify-content: center;
 }
